@@ -1,0 +1,30 @@
+### FindAuctions
+GET http://localhost:8080/auction?status=0 HTTP/1.1
+
+### FindAuctionById
+GET http://localhost:8080/auction/9c211ccc-844f-41dc-8964-535d48f8badc HTTP/1.1
+
+### FindWinningBidByAuctionId
+GET http://localhost:8080/auction/winner/7faa113b-08cc-440c-abba-e700d8de1d4d HTTP/1.1
+
+### CreateAuction
+POST http://localhost:8080/auction HTTP/1.1
+Content-Type: application/json
+
+{
+    "product_name": "Product 1",
+    "category": "Category 1",
+    "description": "Description 1"
+}
+
+### CreateBid
+POST http://localhost:8080/bid HTTP/1.1
+
+{
+    "user_id": "814fc461-80b2-47fc-8b95-01c82b01b4c0",
+    "auction_id": "1c826543-3d22-44b9-808c-80a29e2ab7fc",
+    "amount": 100
+}
+
+### FindUserById
+GET http://localhost:8080/user/814fc461-80b2-47fc-8b95-01c82b01b4c0 HTTP/1.1
